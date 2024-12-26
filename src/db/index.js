@@ -4,12 +4,11 @@ import { DB_NAME } from "../constants.js";
 export const connectDB = async () => {
   try {
     const connectionInstance = await mongoose.connect(
-      `${process.env.MONGO_URI}/${DB_NAME}`
+      `${process.env.MONGODB_URI}/${DB_NAME}`
     );
     console.log(`MongoDB connected !! DB_HOST: ${connectionInstance}`);
   } catch (error) {
-    console.log("ERROR : ", error);
+    console.log("ERROR A GAYA: ", error);
     process.exit(1);
   }
 };
-
